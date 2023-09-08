@@ -1,6 +1,6 @@
 def puissance(a,b):
 	c=a**b
-	print(a,"puissance ", b,"= ", c)
+	print(a,"puissance",b,"= ", c)
 	return c
 
 
