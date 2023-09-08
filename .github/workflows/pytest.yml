@@ -10,8 +10,8 @@ jobs:
       - name: install pytest
         run: pip3 install pytest
       - name: Run tests
+        run: pytest TP1/test.py
         include:
           - node: 15
           os: ubuntu-latest
           experimental: true
-        run: pytest TP1/test.py
