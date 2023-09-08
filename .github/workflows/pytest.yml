@@ -4,6 +4,7 @@ jobs:
  build:
   runs-on: ubuntu-latest
   steps:
+   run: pip3 install pytest
    - uses: actions/checkout@v3
    - name: Set up Python for Demo
      uses: actions/setup-python@v4
