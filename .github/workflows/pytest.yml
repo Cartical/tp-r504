@@ -7,14 +7,14 @@ jobs:
       matrix :
         python−version : ["3.8", "3.10"]
     steps:
-      - run : echo "Nom branche:${{ github.ref }}"
-      - run : echo "OS:${{ runner.os }}"
+      - run: echo "Nom branche:${{ github.ref }}"
+      - run: echo "OS:${{ runner.os }}"
       - uses: actions/checkout@v3
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
         with:
           python−version: ${{matrix.python−version}}
       - name: install pytest
-        run : pip3 install pytest
+        run: pip3 install pytest
       - name: Run tests
-        run : pytest TP1/test.py
+        run: pytest TP1/test.py
