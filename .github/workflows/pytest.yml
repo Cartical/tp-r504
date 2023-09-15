@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        matrix.python−version: ["3.8","3.10"]
+        python−version: [ "3.8","3.10" ]
     steps:
       - run : echo "Nom branche:${{ github.ref }}"
       - run : echo "OS:${{ runner.os }}"
