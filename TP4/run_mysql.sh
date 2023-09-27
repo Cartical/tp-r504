@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 #lancement serveur sql
-docker run --rm -d \
+sudo docker run --rm -d \
 	-p 3307:3306 \
 	-v vol-sql-demo:/var/lib/mysql \
 	--name tp4-sql \
