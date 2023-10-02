@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-docker build -t im-tp4
+docker build -t im-tp4 -f Dockerfile1 .

@@ -9,6 +9,7 @@ db_config = {
     'user': 'root',
     'password': 'foo',
     'database': 'NON-DE-LA-BDD'
+    'port': '3307'
 }
 
 # Initialize MySQL connection
