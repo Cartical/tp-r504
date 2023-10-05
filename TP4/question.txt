@@ -13,3 +13,4 @@ taille im-tp4 : 778MB
 
 q2.12 :
 taille im-tp4 : 791 MB
+taille après suppression build essential : 
