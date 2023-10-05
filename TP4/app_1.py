@@ -9,11 +9,11 @@ db_config = {
 	'user': 'root',
 	'password': 'foo',
 	'database': 'demosql',
-	'port': '3307'
+	'port': '3306'
 }
 
 # Initialize MySQL connection
-conn = mysql.connector.connect(db_config)
+conn = mysql.connector.connect(**db_config)
 cursor = conn.cursor() 
 
 
