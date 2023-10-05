@@ -11,3 +11,5 @@ q2.9 :
 taille debian 11: 124MB
 taille im-tp4 : 778MB
 
+q2.12 :
+taille im-tp4 : 791 MB
