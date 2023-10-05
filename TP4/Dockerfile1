@@ -4,7 +4,7 @@ RUN apt-get install -y build-essential python-dev python3-pip default-libmysqlcl
 RUN apt-get install -y pkg-config
 RUN pip3 install --upgrade pip 
 RUN pip3 install flask-mysqldb mysql-connector-python
-CMD ["mkdir", "/srv/templates"]
+CMD [ "mkdir", "/srv/templates" ]
 COPY index.html /srv/templates
 COPY app_1.py /srv/
-CMD ["flask","--app","/srv/app1","run","--host=0.0.0.0"]
+CMD [ "flask","--app","/srv/app_1.py","run","--host=0.0.0.0" ]
