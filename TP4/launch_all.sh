@@ -18,11 +18,9 @@ docker network rm net-tp4
 ./run_mysql.sh
 
 # etape 3
-if [ $(./filldb.sh) !=0 ]
-then 
-	echo "echec du remplissage de la base de données"
-	./filldb.sh
-fi
+sleep 30
+./filldb.sh
+
 
 # etape 4
 ./run-app.sh
