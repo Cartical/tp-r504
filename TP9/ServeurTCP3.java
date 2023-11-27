@@ -3,7 +3,7 @@
 import java.io.*;
 import java.net.*;
 
-public class ServeurTCP2
+public class ServeurTCP3
 {
 	public static void main( String[] args )
 	{

@@ -3,7 +3,7 @@
 import java.io.*;
 import java.net.*;
 
-public class ClientTCP3
+public class ClientTCP2
 {
 	public static void main( String[] args )
 	{
