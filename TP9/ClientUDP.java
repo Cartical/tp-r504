@@ -5,7 +5,7 @@ public class ClientUDP
 {
 	public static void main( String[] args )
 	{
-		try {		
+		try {
 			InetAddress addr = InetAddress.getLocalHost();
 			System.out.println( "adresse=" +addr.getHostName() );
 			String s="Hello World";
