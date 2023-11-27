@@ -11,15 +11,10 @@ public class ServeurUDP
 			{
 				System.out.println( "-Waiting data" );
 				DatagramPacket packet = new DatagramPacket(new byte[1024], 1024);
-				try {
-					sock.receive(packet);
-				}
-				catch( Exception ex ) {
-					System.out.println( "erreur !" ) ;
-					ex.printStackTrace();
-				}
+				sock.receive(packet);
 				String str = new String(packet.getData() );
 				System.out.println( "str=" + str );
+				sock.send(packet);
 			}
 		}
 		catch( Exception ex ) {
