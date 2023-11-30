@@ -1,1 +1,1 @@
-javac -classpath c:\temp\* *.java
+javac -classpath "/home/user/Downloads/java/lib/*" *.java

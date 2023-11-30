@@ -2,34 +2,30 @@
 
 import java.io.*;
 import java.net.*;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.*;
+import org.apache.http.client.methods.*;
+import org.apache.http.impl.client.*;
 
 public class Client1
 {
 	public static void main( String[] args )
 	{
 		try {
-			Socket socket = new Socket( "localhost", 80 );
-			OutputStreamWriter osw = new OutputStreamWriter( socket.getOutputStream() );
-			InputStreamReader isw = new InputStreamReader( socket.getInputStream() );
+			System.out.println( "Test " );
+			CloseableHttpClient client = HttpClients.createDefault();
+			String url = "http://" + args[0];
+			HttpGet request = new HttpGet(url);
+	
+			System.out.println( "Executing request " + request.getRequestLine() );
+			CloseableHttpResponse resp = client.execute(request);
 
-			BufferedWriter bufOut = new BufferedWriter( osw );
-			BufferedReader bufIn = new BufferedReader( isw );
-
-			String request = "GET / HTTP/1.0\r\n\r\n"; //requete HTTP
-			bufOut.write( request, 0, request.length() );
-			bufOut.flush();
-
-			String line = bufIn.readLine(); 	// lecture ligne par ligne 
-			while( line != null ) {			// tant qu'il y a des dpnnées reçus,
-				System.out.println( line );	// ... les afficher
-				line = bufIn.readLine();
-			}
-			bufIn.close();
-			bufOut.close();
-			socket.close();
+			System.out.println( "Response Line: " + resp.getStatusLine() );
+			System.out.println( "Response Code: " + resp.getStatusLine().getStatusCode() );
 		}
 		catch( Exception ex ) {
 			System.out.println( "erreur !" ) ;
+			System.exit(1);
 			ex.printStackTrace();
 		}
 	}
