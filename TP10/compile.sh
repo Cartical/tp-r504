@@ -1,0 +1,1 @@
+javac -classpath c:\temp\* *.java
