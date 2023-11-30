@@ -11,6 +11,7 @@ public class ClientTCP3
 			Socket socket = new Socket( "localhost", 2016 );
 			DataOutputStream dOut = new DataOutputStream( socket.getOutputStream() );
 			dOut.writeUTF( args[0] );
+			//String rev = new StringBuilder(dOut.readUTF()).reverse().toString();
 			socket.close();
 		}
 		catch( Exception ex ) {
