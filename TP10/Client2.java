@@ -1,4 +1,4 @@
-// Client1.java 
+// Client2.java 
 
 import java.io.*;
 import java.net.*;
@@ -8,7 +8,9 @@ import org.apache.http.client.*;
 import org.apache.http.client.methods.*;
 import org.apache.http.impl.client.*;
 
-public class Client1
+import javax.json.*;
+
+public class Client2
 {
 	public static void main( String[] args )
 	{
@@ -23,16 +25,11 @@ public class Client1
 
 			System.out.println( "Response Line: " + resp.getStatusLine() );
 			System.out.println( "Response Code: " + resp.getStatusLine().getStatusCode() );
-			BufferedReader rd = new BufferedReader( new InputStreamReader( resp.getEntity().getContent()) );
-			StringBuffer result = new StringBuffer();
-			String line = "";
-			while ((line = rd.readLine()) != null)
-			{
-				result.append(line);
-				result.append("\n"); //pour avoir le saut de ligne
-			}
-			String page = result.toString();
-			System.out.println( page );
+			InputStreamReader isr = new InputStreamReader( resp.getEntity().getContent() );
+			JsonReader reader = Json.createReader(isr);
+			JsonObject jsonObject = reader.readObject();
+			reader.close();
+			isr.close();
 		}
 		catch( Exception ex ) {
 			System.out.println( "erreur !" ) ;
