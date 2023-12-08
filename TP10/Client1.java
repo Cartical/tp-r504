@@ -2,6 +2,7 @@
 
 import java.io.*;
 import java.net.*;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.client.*;
 import org.apache.http.client.methods.*;
@@ -12,7 +13,7 @@ public class Client1
 	public static void main( String[] args )
 	{
 		try {
-			System.out.println( "Test " );
+			//System.out.println( "Test " );
 			CloseableHttpClient client = HttpClients.createDefault();
 			String url = "http://" + args[0];
 			HttpGet request = new HttpGet(url);
