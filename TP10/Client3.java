@@ -48,8 +48,9 @@ public class Client3
 					System.out.println( "affichage du tableau " + ji.getString("Source"));
 					if (ji.equals("Rotten Tomatoes"));
 						System.out.println( "value du tableau " + ji.getString("Value"));
-						
-						int p=Integer.parseInt(ji.getString("Value"));  
+						s=ji.getString("Value")
+						s.substring(0,s.size()-1)
+						int p=Integer.parseInt(s);  
 						System.out.println(p);
 				}
 			}
