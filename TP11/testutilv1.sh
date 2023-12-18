@@ -7,7 +7,7 @@ function saisirUser {
  
 function verifUser { 
     if grep "^$users:" /etc/passwd > /dev/null; then 
-        echo "L'utilisateur existe" 
+        echo "L'utilisateur existe"
     else 
         echo "L'utilisateur n'existe pas"
     fi 
