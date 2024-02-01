@@ -31,7 +31,7 @@ public class Client2
 			reader.close();
 			isr.close();
 			System.out.println( "duree=" + jsonObject.getString("Runtime") );
-			System.out.println( "duree=" + jsonObject.getInt("Runtime") );
+			//System.out.println( "duree=" + jsonObject.getInt("Runtime") );
 		}
 		catch( Exception ex ) {
 			System.out.println( "erreur !" ) ;

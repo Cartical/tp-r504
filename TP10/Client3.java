@@ -34,24 +34,21 @@ public class Client3
 				reader.close();
 				isr.close();
 				System.out.println( "duree=" + jsonObject.getString("Runtime") );
-//				System.out.println( "duree=" + jsonObject.getInt("Runtime") );
 
-			/*	Scanner sc = new Scanner(System.in);
-				System.out.println("Veuillez saisir un titre :");
-				String str = sc.nextLine();
-				System.out.println("Vous avez saisi : " + str);
-			*/	
+
+	
 				JsonArray tab = jsonObject.getJsonArray( "Ratings" );
 				for( int i=0; i<tab.size(); i++ )
 				{
 					JsonObject ji = tab.getJsonObject( i );// chercher dans la doc Java comment recuperer un objet Json dans un tableau
 					System.out.println( "affichage du tableau " + ji.getString("Source"));
-					if (ji.equals("Rotten Tomatoes"));
+					if (ji.equals("Rotten Tomatoes"));{
 						System.out.println( "value du tableau " + ji.getString("Value"));
-						s=ji.getString("Value")
-						s.substring(0,s.size()-1)
+						String s=ji.getString("Value");
+						s = s.substring(0,s.length()-1);
 						int p=Integer.parseInt(s);  
 						System.out.println(p);
+					}
 				}
 			}
 		}
