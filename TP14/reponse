@@ -1,0 +1,19 @@
+Combien de CVE trouve-t-il ? 868
+
+- Limiter le volume en précisant le "codename" de la distribution avec l’option –suite
+(on obtient ce codename avec $ lsb_release --codename --short )
+Combien de CVE trouve-t-il ? 868
+
+
+Q1.3 - Certaines de ces CVE sont déjà corrigées, et devraient disparaitre de la liste après une MAJ. 
+Donner le nombre de CVE déjà corrigées en ajoutant l’option --only-fixed : 224
+(les restantes ne sont pas corrigées, et donc se seront pas supprimées par une MAJ)
+
+
+
+Faire une mise à jour générale (apt update/upgrade). Si la machine le demande, désactivez tous
+les services, avant de rebooter, puis refaire le test.
+Combien de CVE sont encore présentes ? 52
+
+Normalement, il ne devrait plus y avoir de CVE corrigées. Combien en trouvez-vous ?
+Afficher les détails de chaque CVE en ajoutant l’option --format detail
