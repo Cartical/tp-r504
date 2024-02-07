@@ -24,7 +24,7 @@ def new_user():
         # Renvoyer la page avec le message en utilisant le template Jinja
         return render_template('newuser.html', message=message)
 
-    # Afficher le formulaire si la méthode est GET
+    # Affichage de la page formulaire avec get
     return render_template('newuser.html', message=None)
 
 if __name__ == '__main__':
